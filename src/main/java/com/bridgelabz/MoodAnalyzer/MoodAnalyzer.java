@@ -1,13 +1,28 @@
 package com.bridgelabz.MoodAnalyzer;
 
 public class MoodAnalyzer {
-	public String analyseMood(String message) {
+	 private String message;
+	    //Default Constructor
+	    public MoodAnalyzer() {
+	    }
+	    //Parameterized Constructor
+	    public MoodAnalyzer(String message) {
+	        this.message = message;
+	    }
 
-        if (message.contains("sad"))
-            return "SAD";
-        else
-            return "HAPPY";
-    }
-}
+	    //Handle NULLPOINTER Exception using try-catch block
+	    public String analyseMood() {
+	        try {
+	            if (message.contains("sad"))
+	                return "SAD";
+	            else
+	                return "HAPPY";
+	        } catch(Exception e) {
+	            return "HAPPY";
+	        }
+	    }
+	}
+
+	
 
 
